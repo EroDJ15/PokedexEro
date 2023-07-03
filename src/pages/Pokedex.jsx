@@ -102,23 +102,25 @@ const Pokedex = () => {
   };
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen overflow-hidden">
       <Header />
 
       <section className="py-6 px-2 text-center">
         <h3 className='font-semibold text-center'>Welcome {nameTrainer}, here you can find your favorite Pokemon</h3>
 
         <form onSubmit={handleSubmit} className="mt-4">
-          <div className="flex items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center">
             <input
               id="namePokemon"
               placeholder="Type a Pokemon name..."
               type="text"
-              className="mr-2 px-2 py-1 border border-gray-200 rounded focus:outline-none"
+              className="mr-1 px-2 py-1 border border-gray-200 rounded focus:outline-none text-center w-auto"
             />
+
+
             <button
               type="submit"
-              className="px-4 py-1 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none"
+              className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none"
             >
               Search
             </button>

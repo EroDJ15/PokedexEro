@@ -73,6 +73,9 @@ const PokemonId = () => {
     <main className="bg-gray-300 min-h-screen">
       <Header />
       <section className="container mx-auto min-h-full py-6">
+        {/* Información general del Pokémon */}
+      </section>
+      <section className="container mx-auto min-h-full py-6">
         {/* Información detallada del Pokémon */}
         <article className={`bg-white rounded-2xl border-8 ${pokeBorder[pokemon?.types[0].type.name]}`}>
           {/* Imagen del Pokémon */}
@@ -80,6 +83,16 @@ const PokemonId = () => {
             <section className={`relative h-30 ${pokeLinearGradients[pokemon?.types[0].type.name]}`}>
               <div className="flex justify-center items-center">
                 <div className="max-h-full w-44 mx-auto">
+                  <section className="container mx-auto min-h-full py-6">
+                    {/* Nombre del Pokémon */}
+                    <h2 className="text-3xl font-semibold mb-1 text-center text-yellow-50 text-opacity-60">
+                      {pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}
+                    </h2>
+                    <div className="flex justify-center items-center">
+                      <div className="max-h-full w-44 mx-auto">
+                      </div>
+                    </div>
+                  </section>
                   <img
                     src={pokemon.sprites.other['official-artwork'].front_default}
                     alt={pokemon.name}
