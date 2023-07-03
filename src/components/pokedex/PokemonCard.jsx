@@ -16,11 +16,11 @@ const pokeLinearGradients = {
     fairy: "bg-gradient-to-t from-black to-pink-500",
     fighting: "bg-gradient-to-t from-black to-red-500",
     psychic: "bg-gradient-to-t from-black to-purple-500",
-    rock: "bg-gradient-to-t from-black to-yellow-500",
+    rock: "bg-gradient-to-t from-black to-stone-400",
     ghost: "bg-gradient-to-t from-black to-purple-500",
-    ice: "bg-gradient-to-t from-black to-blue-500",
+    ice: "bg-gradient-to-t from-black to-sky-300",
     dragon: "bg-gradient-to-t from-black to-purple-500",
-    dark: "bg-gradient-to-t from-black to-gray-500",
+    dark: "bg-gradient-to-t from-black to-neutral-900",
     steel: "bg-gradient-to-t from-black to-gray-500",
     flying: "bg-gradient-to-t from-black to-blue-500",
     unknown: "rose-500"
@@ -30,18 +30,18 @@ const pokeBorder = {
     fighting: "border-orange-700",
     flying: "border-blue-500",
     poison: "border-purple-500",
-    ground: " border-yellow-600",
+    ground: " border-yellow-500",
     rock: "border-stone-400",
     bug: "border-green-500",
     ghost: "border-blue-950",
-    steel: "border-zinc-400",
+    steel: "border-gray-500",
     fire: "border-orange-600",
     water: "border-blue-500",
     grass: "border-green-500",
     electric: "border-yellow-500",
-    psychic: "border-teal-300",
-    ice: "border-sky-200",
-    dragon: "-rose-700",
+    psychic: "border-purple-500",
+    ice: "border-sky-300",
+    dragon: "border-purple-500",
     dark: "border-neutral-900",
     fairy: "border-emerald-300",
     unknown: "border-stone-900",
@@ -55,7 +55,7 @@ const textFont = {
     flying: "text-yellow-900",
     poison: "text-violet-900",
     ground: " text-amber-800",
-    rock: "text-stone-400",
+    rock: "text-stone-600",
     bug: "text-lime-600",
     ghost: "text-blue-950",
     steel: "text-zinc-400",
@@ -63,8 +63,8 @@ const textFont = {
     water: "text-sky-500",
     grass: "text-lime-500",
     electric: "text-amber-100",
-    psychic: "text-teal-300",
-    ice: "text-sky-200",
+    psychic: "text-purple-500",
+    ice: "text-sky-300",
     dragon: "-rose-700",
     dark: "text-neutral-900",
     fairy: "text-emerald-300",
@@ -90,7 +90,7 @@ const PokemonCard = ({ pokemonUrl }) => {
 
     return (
         <article className={`border-8 ${pokeBorder[pokemon?.types[0].type.name]} 
-        rounded-3xl `}>
+        rounded-2xl `}>
             <Link to={`/pokedex/${pokemon?.name}`}>
                 {/*seccion superior*/}
                 <section className={`relative h-40 
@@ -107,9 +107,9 @@ const PokemonCard = ({ pokemonUrl }) => {
 
                     <h3 className={`mt-14 text-center capitalize font-sans
                     ${textFont[pokemon?.types[0].type.name]}
-                     font-bold text-3xl`}>{pokemon?.name}</h3>
-                    <h5 className='text-center text-lg'>{formatTypesPokemon(pokemon?.types)}</h5>
-                    <span className='text-stone-400 text-sm'>Type</span>
+                     font-bold text-2xl`}>{pokemon?.name}</h3>
+                    <h5 className='text-center text-lg font-semibold'>{formatTypesPokemon(pokemon?.types)}</h5>
+                    <span className='text-stone-500 text-sm'>Type</span>
                     <hr />
 
                     <section className='grid grid-cols-2 p-4'>
@@ -117,7 +117,7 @@ const PokemonCard = ({ pokemonUrl }) => {
                         {
                             pokemon?.stats.slice(0, 4).map(stat => (
                                 <div key={stat.stat.url}>
-                                    <h6 className='text-stone-400 text-sm p-2'>{stat.stat.name}</h6>
+                                    <h6 className='text-stone-600 text-lg p-4'>{stat.stat.name}</h6>
                                     <span className={`font-bold ${textFont[pokemon?.types[0].type.name]}`}>{stat.base_stat} </span>
                                 </div>
                             ))}
