@@ -33,10 +33,10 @@ const PokemonId = () => {
     electric: "bg-gradient-to-t from-black to-yellow-500",
     ground: "bg-gradient-to-t from-black to-yellow-500",
     fairy: "bg-gradient-to-t from-black to-pink-500",
-    fighting: "bg-gradient-to-t from-black to-red-500",
+    fighting: "bg-gradient-to-t from-black to-orange-700",
     psychic: "bg-gradient-to-t from-black to-purple-500",
     rock: "bg-gradient-to-t from-black to-stone-400",
-    ghost: "bg-gradient-to-t from-black to-purple-500",
+    ghost: "bg-gradient-to-t from-black to-blue-950",
     ice: "bg-gradient-to-t from-black to-sky-300",
     dragon: "bg-gradient-to-t from-black to-purple-500",
     dark: "bg-gradient-to-t from-black to-neutral-900",
@@ -63,7 +63,7 @@ const PokemonId = () => {
     ice: "border-sky-300",
     dragon: "border-purple-500",
     dark: "border-neutral-900",
-    fairy: "border-emerald-300",
+    fairy: "border-pink-500",
     unknown: "border-stone-900",
     shadow: "border-neutral-800"
 
